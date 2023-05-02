@@ -1,0 +1,78 @@
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\appsettings.json
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.exe
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.deps.json
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.runtimeconfig.json
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.pdb
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.csproj.AssemblyReference.cache
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.AssemblyInfoInputs.cache
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.AssemblyInfo.cs
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.csproj.CoreCompileInputs.cache
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets\msbuild.CandidateSoW.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets\msbuild.build.CandidateSoW.props
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CandidateSoW.props
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CandidateSoW.props
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\scopedcss\bundle\CandidateSoW.styles.css
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.csproj.CopyComplete
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\refint\CandidateSoW.dll
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.pdb
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.genruntimeconfig.cache
+C:\Users\188092\Downloads\SOWTracker-main (5)\CandidateSoW_API\CandidateSoW\CandidateSoW\obj\Debug\net6.0\ref\CandidateSoW.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\appsettings.json
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.exe
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.deps.json
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.runtimeconfig.json
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\CandidateSoW.pdb
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.csproj.AssemblyReference.cache
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.AssemblyInfoInputs.cache
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.AssemblyInfo.cs
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.csproj.CoreCompileInputs.cache
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets\msbuild.CandidateSoW.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets\msbuild.build.CandidateSoW.props
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CandidateSoW.props
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CandidateSoW.props
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\scopedcss\bundle\CandidateSoW.styles.css
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.csproj.CopyComplete
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\refint\CandidateSoW.dll
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.pdb
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\CandidateSoW.genruntimeconfig.cache
+C:\Users\237476\Desktop\SOW\CandidateSoW\CandidateSoW\CandidateSoW\obj\Debug\net6.0\ref\CandidateSoW.dll

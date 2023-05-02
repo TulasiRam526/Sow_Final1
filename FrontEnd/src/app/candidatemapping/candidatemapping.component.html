@@ -1,0 +1,154 @@
+<div class="result-loader" *ngIf="resultloader">
+    <div class="loading-image"></div>
+</div>
+<div class="page">
+<div class="card1">
+        <h2 class="headernew">SOCandidate Mapping</h2>
+        
+    <div class="form-group row">
+        <div class="col-12 col-md-4 mb-3">
+            <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mappingModal">
+             Add
+    </button>
+        </div>
+        <div class="col-8 col-md-4 mb-3">
+          <input type="text" class="form-control" maxlength="256" [(ngModel)]="searchText" (keyup)="searchFilter()" placeholder="Search by any column">
+        </div>
+        <div class="col-4 col-md-3 mb-3">
+            <button class="btn btn-success" (click)="download();" title="Download to Excel">
+                <i class="bi bi-file-earmark-arrow-down"></i> Download
+              </button>
+        </div>
+      </div>
+      
+        <div class="row tbl-fixed">
+
+            <div style="flex-grow: 1; text-align: left; margin-bottom: 10px;">
+
+            </div>
+            <table class="table table-fixed">
+                <thead>
+                    <th class="tableborder">SO Name</th>
+                    <th class="tableborder">Candidate Name</th>
+                    <th class="tableborder">Status</th>
+                    <th class="tableborder" *ngIf="isAuthor">Actions</th>
+                </thead>
+                <tbody *ngIf="MappingData">
+                    <tr *ngFor="let map of batchRecord">
+                        <td class="tableborder">{{map.soName}}</td>
+                        <td class="tableborder">{{map.candidateName}}</td>
+                        <td class="tableborder">{{map.statusName}}</td>
+                        <td class="tableborder" *ngIf="isAuthor">
+                            <i class="bi bi-pencil-square" data-toggle="modal" data-target="#mappingModal" (click)="editDetails(map)" title="Edit"></i>&nbsp;
+                           
+                                    <i class="bi bi-trash" (click)="deleteDetails(map)" title="Delete"></i>
+                           
+                                    
+                        </td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+    
+        <p>Row Count: {{rowCount}}</p>
+        <div class="row justify-content-center" style="margin-top: 10px;">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><button class="btn btn-info" (click)="OnPreviousClicked()"
+                            (mousedown)="OnPreviousHeld()" (mouseup)="OnPreviousReleased()"
+                            [disabled]="!(currentPage > 1)">Previous</button></li>
+                    <li class="page-item active">
+                        <label style="margin-left:10px">Page</label>
+                        <input type="number" style="width: 3.2rem; height: 1.9rem;margin-right: 5px;"
+                            [value]="totalPages === 0 ? 0 : currentPage" [min]="totalPages === 0 ? 0 : 1"
+                            (change)="OnPageNumberChanged($event)" [max]="totalPages">
+
+                        <label>of {{totalPages}}</label>
+                    </li>
+                    <li class="page-item">
+                        <button class="btn btn-info" (click)="OnNextClicked()" (mousedown)="OnNextHeld()"
+                            (mouseup)="OnNextReleased()" [disabled]="(currentPage == totalPages)">Next</button>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+  
+  <!-- Mapping Modal -->
+  <div class="modal fade" id="mappingModal" tabindex="-1" role="dialog" aria-labelledby="mappingModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mappingModalLabel">SOCandidate Mapping</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div>
+        <form [formGroup]="mapppingForm" (ngSubmit)="onSubmit()">
+          <div class="modal-body">
+            <div class="form-group row">
+              <label class="col-sm-4 col-md-4 mb-1 ml-3 col-form-label" for="candidateId">Candidate Name</label>
+              <div  class="col-sm-8 col-md-7 mb-1 ">
+                <select id="candidateId"  class="form-control" name="candidateId" formControlName="candidateId">
+                  <option value="" disabled selected>Select a Candidate</option>
+                  <option *ngFor="let candidate of CandidateData" value="{{candidate.candidateId}}">
+                    {{candidate.candidateName}}
+                  </option>
+                </select>
+                <div *ngIf="(f.candidateId.touched) && f.candidateId.invalid" class="text-danger">
+                  <div *ngIf="f.candidateId.errors.required"><small>*CandidateName is required</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label  class="col-sm-4 col-md-4 mb-1 ml-3 col-form-label" for="sowId">SO Name</label>
+              <div  class="col-sm-8 col-md-7 mb-1 ">
+                <select id="sowId"  class="form-control" name="sowId" formControlName="sowId">
+                  <option value="" disabled selected>Select a SO</option>
+                  <option *ngFor="let sow of SOData" value="{{sow.sowId}}">{{sow.soName}}</option>
+                </select>
+                <div *ngIf="(f.sowId.touched) && f.sowId.invalid" class="text-danger">
+                  <div *ngIf="f.sowId.errors.required"><small>*SO Name is required</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label  class="col-sm-4 col-md-4 mb-1 ml-3 col-form-label" for="statusId">Status</label>
+              <div  class="col-sm-8 col-md-7 mb-1 ">
+                <select id="statusId"  class="form-control" name="statusId" formControlName="statusId">
+                  <option value="" disabled selected>Select a Status</option>
+                  <option *ngFor="let status of StatusData" value="{{status.statusId}}">{{status.statusName}}
+                  </option>
+                </select>
+                <div *ngIf="(f.statusId.touched ) && f.statusId.invalid" class="text-danger">
+                  <div *ngIf="f.statusId.errors.required"><small>*Status is required</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        
+          </form>
+    </div>
+    </div>
+  </div>
+</div>  
+
+
+
+
+
+
+      
+   
+

@@ -1,0 +1,141 @@
+<div class="page">
+    <div div class="card1">
+        <h2 class="headernew">Registration</h2>
+        <div class="form-group row">
+            <div class="col-12 col-md-4 mb-3">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mappingModal">
+                    Add
+                </button>
+            </div>
+            <div class="col-8 col-md-4 mb-3">
+                <input type="text" class="form-control" maxlength="256" [(ngModel)]="searchText"
+                    (keyup)="searchFilter()" placeholder="Search by any column">
+            </div>
+            <div class="col-4 col-md-3 mb-3">
+                <button class="btn btn-success" (click)="download();" title="Download to Excel">
+                    <i class="bi bi-file-earmark-arrow-down"></i> Download
+                </button>
+            </div>
+        </div>
+    
+    <div class="container">
+    
+        <div  class="row tbl-fixed">
+            <table class="table table-fixed">
+                <thead>
+                    <th class="tableborder">User Name</th>
+                    <th class="tableborder">Email Id</th>
+                    <th class="tableborder">Role</th>
+                    <th class="tableborder" *ngIf="isAuthor">Actions</th>
+                </thead>
+                <tbody *ngIf="loginData">
+                    <tr *ngFor="let map of batchRecord">
+                        <td class="tableborder">{{map.loginName}}</td>
+                        <td class="tableborder">{{map.emailId}}</td>
+                        <td class="tableborder">{{map.roleName}}</td>
+                        <td class="tableborder" *ngIf="isAuthor">
+                            <i class="bi bi-pencil-square" data-toggle="modal" data-target="#mappingModal" (click)="editDetails(map)" title="Edit"></i>&nbsp;
+                           
+                                    <i class="bi bi-trash" (click)="deleteDetails(map)" title="Delete"></i>&nbsp;
+                           
+                                    <i *ngIf="lock" class="bi bi-lock"(click)="lockAccount()"></i>
+                                    <i *ngIf="!lock" class="bi bi-unlock"(click)="lockAccount()"></i>&nbsp;
+                                    <i class="bi bi-arrow-repeat" title="Reset" (click)="resetAccount()"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        
+        <p>Row Count: {{rowCount}}</p>
+        <div class="row justify-content-center" style="margin-top: 10px;">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><button class="btn btn-info" (click)="OnPreviousClicked()"
+                            (mousedown)="OnPreviousHeld()" (mouseup)="OnPreviousReleased()"
+                            [disabled]="!(currentPage > 1)">Previous</button></li>
+                    <li class="page-item active">
+                        <label style="margin-left:10px">Page</label>
+                        <input type="number" style="width: 3.2rem; height: 1.9rem;margin-right: 5px;"
+                            [value]="totalPages === 0 ? 0 : currentPage" [min]="totalPages === 0 ? 0 : 1"
+                            (change)="OnPageNumberChanged($event)" [max]="totalPages">
+
+                        <label>of {{totalPages}}</label>
+                    </li>
+                    <li class="page-item">
+                        <button class="btn btn-info" (click)="OnNextClicked()" (mousedown)="OnNextHeld()"
+                            (mouseup)="OnNextReleased()" [disabled]="(currentPage == totalPages)">Next</button>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<!-- <app-paginationcommon [currentPage]="currentPage" [totalPages]="totalPages" (pageChanged)="OnPageChanged($event)"></app-paginationcommon> -->
+ <!-- Mapping Modal -->
+ <div class="modal fade" id="mappingModal" tabindex="-1" role="dialog" aria-labelledby="mappingModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="mappingModalLabel">Registration</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <div>
+
+            <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+                <div class="modal-body">
+                <div class="form-group row">
+                    <label for="userName"  class="col-sm-4 col-md-4 mb-1 ml-3 col-form-label">User Name</label>
+                   
+                   <div class="col-sm-8 col-md-7 mb-1 ">
+                        <input type="text" class="form-control" id="userName" name="userName" formControlName="userName"
+                            placeholder="Enter User Name" required>
+                        <div *ngIf="(f.userName.touched ) && f.userName.invalid"
+                            class="text-danger">
+                            <div *ngIf="f.userName.errors.required"><small>*User Name is required</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="emailId"  class="col-sm-4 col-md-4 mb-1 ml-3 col-form-label">Email ID</label>
+                    
+                   <div class="col-sm-8 col-md-7 mb-1 ">
+                        <input type="text" class="form-control" id="emailId" name="emailId" formControlName="emailId"
+                            placeholder="Enter Email Id" required>
+                        <div *ngIf="(f.emailId.touched ) && f.emailId.invalid"
+                            class="text-danger">
+                            <div *ngIf="f.emailId.errors.required"><small>*Email ID is required</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="role"  class="col-sm-4 col-md-4 mb-1 ml-3 col-form-label">Role</label>
+                    
+                   <div class="col-sm-8 col-md-7 mb-1 ">
+                        <select id="role" name="role" class="form-control" formControlName="role">
+                            <option value="" disabled selected>Select a role</option>
+                            <option *ngFor="let roles of roleName" value="{{roles.roleId}}">{{roles.roleName}}</option> 
+                        </select>
+                        <div *ngIf="(f.role.touched ) && f.role.invalid" class="text-danger">
+                            <div *ngIf="f.role.errors.required"><small>*Role is required</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            </form>
+         </div>
+     </div>
+ </div>
+</div>

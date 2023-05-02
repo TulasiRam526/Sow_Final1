@@ -1,0 +1,111 @@
+<div class="result-loader" *ngIf="resultloader">
+    <div class="loading-image"></div>
+</div>
+<div class="page">
+<div class="card1">
+    <h2 class="headernew">Domain</h2>
+
+  
+    <div class="form-group row">
+        <div class="col-12 col-md-4 mb-3">
+            <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mappingModal">
+             Add
+    </button>
+        </div>
+        <div class="col-8 col-md-4 mb-3">
+          <input type="text" class="form-control" maxlength="256" [(ngModel)]="searchText" (keyup)="searchFilter()" placeholder="Search by any column">
+        </div>
+        <div class="col-4 col-md-3 mb-3">
+            <button class="btn btn-success" (click)="download();" title="Download to Excel">
+                <i class="bi bi-file-earmark-arrow-down"></i> Download
+              </button>
+        </div>
+      </div>
+      <div class="container">
+   
+        <div class="row tbl-fixed">
+            <div style="flex-grow: 1; text-align: left; margin-bottom: 10px;">
+            </div>
+            <table class="table table-fixed" >
+                <thead>
+                    <!-- <th class="tableborder">Domain Id</th> -->
+                    <th class="tableborder">Domain Name</th>
+                    <th class="tableborder" *ngIf="isAuthor">Actions</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let domain of batchRecord">
+                        <!-- <td class="tableborder">{{domain.domainId}}</td> -->
+                        <td class="tableborder">{{domain.domainName}}</td>
+                        <td class="tableborder" *ngIf="isAuthor">
+                            <i class="bi bi-pencil-square" (click)=" editDetails(domain)" title="Edit"></i>
+                           
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Row Count: {{rowCount}}</p>
+        <div class="row justify-content-center" style="margin-top: 10px;">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><button class="btn btn-info" (click)="OnPreviousClicked()"
+                            (mousedown)="OnPreviousHeld()" (mouseup)="OnPreviousReleased()"
+                            [disabled]="!(currentPage > 1)">Previous</button></li>
+                    <li class="page-item active">
+                        <label style="margin-left:10px">Page</label>
+                        <input type="number" style="width: 3.2rem; height: 1.9rem;margin-right: 5px;"
+                            [value]="totalPages === 0 ? 0 : currentPage" [min]="totalPages === 0 ? 0 : 1"
+                            (change)="OnPageNumberChanged($event)" [max]="totalPages">
+
+                        <label>of {{totalPages}}</label>
+                    </li>
+                    <li class="page-item">
+                        <button class="btn btn-info" (click)="OnNextClicked()" (mousedown)="OnNextHeld()"
+                            (mouseup)="OnNextReleased()" [disabled]="(currentPage == totalPages)">Next</button>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+</div>
+
+
+ <!-- Mapping Modal -->
+ <div class="modal fade" id="mappingModal" tabindex="-1" role="dialog" aria-labelledby="mappingModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mappingModalLabel">Add Domain</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div>
+           
+            <form [formGroup]="domainForm" (ngSubmit)="onSubmit()">
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="domainName"  class="col-sm-4 col-md-4 mb-1 ml-3 col-form-label">Domain Name</label>
+                       
+                        <div class="col-sm-8 col-md-7 mb-1 ">
+                            <input type="text" class="form-control" id="domainName" name="domainName" formControlName="domainName"
+                                placeholder="Enter Domain Name" required>
+                            <div *ngIf="(f.domainName.touched) && f.domainName.invalid" class="text-danger">
+                                <div class="errorClass" *ngIf="f.domainName.errors.required">*Domain Name is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                </form>
+            </div>
+    </div>
+    </div>
+  </div>
+  
